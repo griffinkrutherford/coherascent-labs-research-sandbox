@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coherascent Labs - Hypothesis Tracker</title>
+  <meta
+    name="description"
+    content="Structured hypothesis tracker for Coherascent Labs research across deterministic architecture, continuous DPLL, optimization cognition, and neuro-symbolic systems."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../assets/research-pages.css" />
+</head>
+<body>
+  <main>
+    <header class="site-header">
+      <a class="brand" href="../glossary/research-glossary.html" aria-label="Open research glossary">
+        <div class="brand-mark" aria-hidden="true">CL</div>
+        <div class="brand-copy">
+          <h1>Coherascent Labs</h1>
+          <p>Hypothesis Tracker</p>
+        </div>
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="../glossary/research-glossary.html">Glossary</a>
+          <a class="nav-link" href="./hypothesis-tracker.html">Hypotheses</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+          <span class="theme-dot" aria-hidden="true"></span>
+          <span data-theme-label>Light Mode</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="tracker-title">
+      <div class="hero-label">Phase 0 Foundation</div>
+      <h2 id="tracker-title"><span>Hypothesis</span> Tracker</h2>
+      <p>
+        This tracker converts the roadmap into testable claims. Each entry is tied to a research stream,
+        a measurable prediction, a falsification path, and a concrete next action so the program moves by
+        evidence rather than intuition alone.
+      </p>
+      <div class="hero-meta">
+        <div class="meta-pill">Last updated: April 2, 2026</div>
+        <div class="meta-pill">Coverage: 8 hypotheses across 4 research streams</div>
+      </div>
+      <div class="page-links" aria-label="Page sections">
+        <a class="chip-link" href="#lifecycle">Lifecycle</a>
+        <a class="chip-link" href="#standards">Evidence Standard</a>
+        <a class="chip-link" href="#deterministic">Deterministic</a>
+        <a class="chip-link" href="#dpll">Continuous DPLL</a>
+        <a class="chip-link" href="#optimization">Optimization</a>
+        <a class="chip-link" href="#bridge">Bridge</a>
+      </div>
+    </section>
+
+    <section class="section" id="lifecycle" aria-labelledby="lifecycle-title">
+      <h2 class="section-title" id="lifecycle-title">Lifecycle and Discipline</h2>
+      <div class="grid">
+        <article class="status-card">
+          <div class="eyebrow">State Model</div>
+          <h3>Hypothesis States</h3>
+          <div class="pill-row">
+            <span class="status-chip draft">Draft</span>
+            <span class="status-chip active">Active</span>
+            <span class="status-chip testing">Testing</span>
+            <span class="status-chip supported">Supported</span>
+            <span class="status-chip mixed">Mixed</span>
+          </div>
+          <ul class="compact-list">
+            <li><strong>Draft</strong>: promising but not operationalized.</li>
+            <li><strong>Active</strong>: concrete enough to drive design.</li>
+            <li><strong>Testing</strong>: experiments are underway.</li>
+            <li><strong>Supported or Mixed</strong>: assigned only after logged evidence.</li>
+          </ul>
+        </article>
+        <article class="status-card" id="standards">
+          <div class="eyebrow">Evidence Standard</div>
+          <h3>What Counts as Support</h3>
+          <ul class="check-list">
+            <li>The benchmark is explicitly defined.</li>
+            <li>The baseline is fair and relevant.</li>
+            <li>Results reproduce across multiple runs or settings.</li>
+            <li>Failure modes are documented, not hidden.</li>
+            <li>The gain is meaningful relative to cost, latency, or complexity.</li>
+          </ul>
+        </article>
+        <article class="status-card">
+          <div class="eyebrow">Tracker Fields</div>
+          <h3>Required Structure</h3>
+          <ul class="compact-list">
+            <li><strong>ID and stream</strong> to map the claim to the roadmap.</li>
+            <li><strong>Prediction</strong> so success is measurable.</li>
+            <li><strong>Variables</strong> so experiments are scoped correctly.</li>
+            <li><strong>Falsification</strong> so the claim can genuinely fail.</li>
+            <li><strong>Next action</strong> so the tracker drives execution.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="deterministic" aria-labelledby="deterministic-title">
+      <h2 class="section-title" id="deterministic-title">Deterministic Architecture</h2>
+      <article class="hypothesis-card">
+        <div class="hypothesis-header">
+          <div>
+            <div class="eyebrow">H-001</div>
+            <h3>Deterministic control layers reduce contradiction rate in constrained reasoning tasks</h3>
+          </div>
+          <span class="status-chip active">Active</span>
+        </div>
+        <p>
+          Adding a deterministic control layer on top of a probabilistic language model should reduce
+          contradiction rate on structured reasoning tasks relative to unconstrained generation.
+        </p>
+        <div class="meta-grid">
+          <div class="meta-block">
+            <h4>Prediction</h4>
+            <p>Contradiction rate drops on logic-constrained benchmarks and the improvement survives multiple seeds or decoding settings.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Variables</h4>
+            <p>Control-layer presence, enforcement type, decoding policy, and task difficulty.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Falsification</h4>
+            <p>No material improvement, gains only on trivial cases, or unacceptable damage to latency or completion quality.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Next Action</h4>
+            <p>Define the benchmark schema and build a first-pass contradiction checker.</p>
+          </div>
+        </div>
+      </article>
+      <article class="hypothesis-card">
+        <div class="hypothesis-header">
+          <div>
+            <div class="eyebrow">H-002</div>
+            <h3>Post-generation verification can recover invalid outputs without full deterministic decoding</h3>
+          </div>
+          <span class="status-chip draft">Draft</span>
+        </div>
+        <p>
+          A verifier-guided repair stage may recover a meaningful share of invalid outputs at lower
+          implementation cost than a fully integrated deterministic generation pipeline.
+        </p>
+        <div class="meta-grid">
+          <div class="meta-block">
+            <h4>Prediction</h4>
+            <p>Verifier-and-repair should outperform unconstrained generation on logic adherence while remaining simpler than full constrained decoding.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Variables</h4>
+            <p>Verification strategy, repair policy, and allowed retries.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Falsification</h4>
+            <p>Repair rarely succeeds, the verifier is too weak, or total cost approaches stronger methods without similar gains.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Next Action</h4>
+            <p>Define what qualifies as repair rather than regeneration.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="dpll" aria-labelledby="dpll-title">
+      <h2 class="section-title" id="dpll-title">Continuous DPLL</h2>
+      <article class="hypothesis-card">
+        <div class="hypothesis-header">
+          <div>
+            <div class="eyebrow">H-003</div>
+            <h3>A continuous relaxation of unit propagation can preserve useful logical structure</h3>
+          </div>
+          <span class="status-chip active">Active</span>
+        </div>
+        <p>
+          Some DPLL components, especially propagation-like updates, may be relaxable into a differentiable
+          form that still improves reasoning on clause-based tasks.
+        </p>
+        <div class="meta-grid">
+          <div class="meta-block">
+            <h4>Prediction</h4>
+            <p>A propagation-inspired differentiable mechanism should outperform naive continuous baselines on clause consistency or satisfiability-inspired tasks.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Variables</h4>
+            <p>Relaxation design, temperature, training regime, and clause complexity.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Falsification</h4>
+            <p>The relaxation behaves like an unstructured heuristic, gradients are unstable, or simpler methods perform just as well.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Next Action</h4>
+            <p>Formalize a toy setting where unit propagation has a clean continuous analogue.</p>
+          </div>
+        </div>
+      </article>
+      <article class="hypothesis-card">
+        <div class="hypothesis-header">
+          <div>
+            <div class="eyebrow">H-004</div>
+            <h3>Branching is the hardest DPLL component to relax without losing symbolic value</h3>
+          </div>
+          <span class="status-chip draft">Draft</span>
+        </div>
+        <p>
+          Branching and backtracking likely resist continuous relaxation more than local propagation
+          because they depend on discrete commitment and failure structure.
+        </p>
+        <div class="meta-grid">
+          <div class="meta-block">
+            <h4>Prediction</h4>
+            <p>Local consistency updates should preserve symbolic fidelity more readily than branch-selection analogues on comparable tasks.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Variables</h4>
+            <p>Operation type, relaxation mechanism, and problem size.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Falsification</h4>
+            <p>Branching relaxations work as well or better while retaining interpretable semantics, or the distinction proves experimentally unimportant.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Next Action</h4>
+            <p>Define symbolic fidelity in measurable terms.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="optimization" aria-labelledby="optimization-title">
+      <h2 class="section-title" id="optimization-title">Optimization Cognition</h2>
+      <article class="hypothesis-card">
+        <div class="hypothesis-header">
+          <div>
+            <div class="eyebrow">H-005</div>
+            <h3>Curvature-aware optimization reveals latent structure that first-order methods obscure</h3>
+          </div>
+          <span class="status-chip active">Active</span>
+        </div>
+        <p>
+          Second-order or curvature-aware analyses may expose stable regimes, couplings, or transition
+          patterns in cognitive-state models that gradient-only summaries fail to reveal.
+        </p>
+        <div class="meta-grid">
+          <div class="meta-block">
+            <h4>Prediction</h4>
+            <p>Curvature-aware analysis should explain instability, mode switching, or local minima quality better than first-order summaries alone.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Variables</h4>
+            <p>Optimization method, curvature approximation, objective design, and state-space dimensionality.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Falsification</h4>
+            <p>No additional explanatory value, excessive noise, or complexity without decision-relevant insight.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Next Action</h4>
+            <p>Define a small family of toy objectives with known geometric properties.</p>
+          </div>
+        </div>
+      </article>
+      <article class="hypothesis-card">
+        <div class="hypothesis-header">
+          <div>
+            <div class="eyebrow">H-006</div>
+            <h3>Prediction-error minimization alone is insufficient for reliable reasoning dynamics</h3>
+          </div>
+          <span class="status-chip draft">Draft</span>
+        </div>
+        <p>
+          Minimizing prediction error without structural priors or constraints may fit behavior while still
+          producing brittle or uninterpretable internal dynamics.
+        </p>
+        <div class="meta-grid">
+          <div class="meta-block">
+            <h4>Prediction</h4>
+            <p>Pure prediction-error objectives should underperform structured variants on stability, interpretability, or perturbation robustness.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Variables</h4>
+            <p>Objective definition, structural priors, and regularization strategy.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Falsification</h4>
+            <p>Pure prediction-error objectives perform on par with structured approaches across robustness and interpretability criteria.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Next Action</h4>
+            <p>Specify candidate priors and a perturbation protocol for comparison.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="bridge" aria-labelledby="bridge-title">
+      <h2 class="section-title" id="bridge-title">Neuro-Symbolic Bridge</h2>
+      <article class="hypothesis-card">
+        <div class="hypothesis-header">
+          <div>
+            <div class="eyebrow">H-007</div>
+            <h3>Hybrid symbolic-neural systems improve verifiability on reasoning-heavy tasks</h3>
+          </div>
+          <span class="status-chip active">Active</span>
+        </div>
+        <p>
+          A hybrid architecture that combines Transformer representations with explicit symbolic checking
+          or state manipulation should outperform a purely neural baseline on machine-checkable reasoning
+          tasks where verifiability matters.
+        </p>
+        <div class="meta-grid">
+          <div class="meta-block">
+            <h4>Prediction</h4>
+            <p>Hybrid systems should achieve higher verified-correctness rates or lower rule-violation rates on reasoning-heavy tasks.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Variables</h4>
+            <p>Architecture type, symbolic interface design, and task family.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Falsification</h4>
+            <p>No verifiability gain under fair controls or symbolic complexity without measurable value.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Next Action</h4>
+            <p>Define the first candidate hybrid interface and a fair baseline.</p>
+          </div>
+        </div>
+      </article>
+      <article class="hypothesis-card">
+        <div class="hypothesis-header">
+          <div>
+            <div class="eyebrow">H-008</div>
+            <h3>Interface design is the bottleneck in neuro-symbolic systems</h3>
+          </div>
+          <span class="status-chip draft">Draft</span>
+        </div>
+        <p>
+          The main limitation may not be symbolic capacity itself but the quality of the interface between
+          learned representations and formal structures.
+        </p>
+        <div class="meta-grid">
+          <div class="meta-block">
+            <h4>Prediction</h4>
+            <p>Interface changes should explain more performance variance than increasing symbolic rule capacity on matched tasks.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Variables</h4>
+            <p>Interface design, symbolic module complexity, and training or decoding strategy.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Falsification</h4>
+            <p>Increasing symbolic capacity dominates interface changes or interface variants fail to materially alter outcomes.</p>
+          </div>
+          <div class="meta-block">
+            <h4>Next Action</h4>
+            <p>Define a minimal symbolic core that stays fixed while interface variants change.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="measurement-title">
+      <h2 class="section-title" id="measurement-title">Cross-Cutting Measurement Questions</h2>
+      <div class="grid">
+        <article class="status-card">
+          <div class="eyebrow">MQ-001</div>
+          <h3>How will hallucination be measured?</h3>
+          <p>
+            Early experiments should separate contradiction, unverifiable claim, and failed constraint
+            satisfaction rather than treating hallucination as a single undifferentiated label.
+          </p>
+        </article>
+        <article class="status-card">
+          <div class="eyebrow">MQ-002</div>
+          <h3>What counts as meaningful improvement?</h3>
+          <p>
+            Small gains may not justify large costs. Each stream should define minimum effect sizes and
+            acceptable latency or complexity overhead before experiments begin.
+          </p>
+        </article>
+        <article class="status-card">
+          <div class="eyebrow">MQ-003</div>
+          <h3>What level of reproducibility is required?</h3>
+          <p>
+            One successful run is insufficient. The program needs an explicit rerun count, seed policy,
+            and reporting format before any hypothesis is promoted.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="priorities-title">
+      <h2 class="section-title" id="priorities-title">Immediate Priorities</h2>
+      <div class="note-card">
+        <ol class="number-list">
+          <li>Finalize the H-001 benchmark definition and contradiction metric.</li>
+          <li>Formalize the toy setting required by H-003.</li>
+          <li>Define the objective family for H-005.</li>
+          <li>Specify a minimal first hybrid interface for H-007.</li>
+          <li>Link future experiments back to hypothesis IDs from the start.</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        The tracker should stay synchronized with the Markdown source and with future experiment folders so
+        each hypothesis can be traced from claim to benchmark to result.
+      </p>
+      <div class="link-row">
+        <a class="cta" href="../glossary/research-glossary.html">Open Research Glossary</a>
+        <a class="source-link" href="./hypothesis-tracker.md">Markdown Source</a>
+      </div>
+    </footer>
+  </main>
+  <script src="../assets/theme-toggle.js"></script>
+</body>
+</html>

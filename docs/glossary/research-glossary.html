@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coherascent Labs - Research Glossary</title>
+  <meta
+    name="description"
+    content="Operational glossary for Coherascent Labs research across neuro-symbolic AI, deterministic control layers, continuous DPLL, and optimization cognition."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../assets/research-pages.css" />
+</head>
+<body>
+  <main>
+    <header class="site-header">
+      <a class="brand" href="../notes/hypothesis-tracker.html" aria-label="Open hypothesis tracker">
+        <div class="brand-mark" aria-hidden="true">CL</div>
+        <div class="brand-copy">
+          <h1>Coherascent Labs</h1>
+          <p>Research Glossary</p>
+        </div>
+      </a>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="./research-glossary.html">Glossary</a>
+          <a class="nav-link" href="../notes/hypothesis-tracker.html">Hypotheses</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+          <span class="theme-dot" aria-hidden="true"></span>
+          <span data-theme-label>Light Mode</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="glossary-title">
+      <div class="hero-label">Phase 0 Foundation</div>
+      <h2 id="glossary-title"><span>Research</span> Glossary</h2>
+      <p>
+        This glossary standardizes the working language for Coherascent Labs research so notes,
+        experiments, benchmarks, and papers use the same operational definitions. The emphasis is on
+        measurable meaning rather than rhetorical framing.
+      </p>
+      <div class="hero-meta">
+        <div class="meta-pill">Last updated: April 2, 2026</div>
+        <div class="meta-pill">Scope: logic, optimization, evaluation, neuro-symbolic systems</div>
+      </div>
+      <div class="page-links" aria-label="Page sections">
+        <a class="chip-link" href="#usage">Usage Rules</a>
+        <a class="chip-link" href="#research-language">Research Language</a>
+        <a class="chip-link" href="#logic-systems">Logic Systems</a>
+        <a class="chip-link" href="#optimization">Optimization</a>
+        <a class="chip-link" href="#evaluation">Evaluation</a>
+        <a class="chip-link" href="#formalization">Formalization</a>
+      </div>
+    </section>
+
+    <section class="section" id="usage" aria-labelledby="usage-title">
+      <h2 class="section-title" id="usage-title">Usage Rules</h2>
+      <p class="section-copy">
+        The glossary is intended to function as a contract across the repository. If a future note,
+        notebook, or paper uses a narrower definition, that deviation should be stated explicitly rather
+        than assumed.
+      </p>
+      <div class="grid">
+        <article class="status-card">
+          <div class="eyebrow">Purpose</div>
+          <h3>Operational by Default</h3>
+          <p>
+            Terms should be interpreted in a way that supports experiment design, failure analysis, or
+            benchmark construction. Ambiguous terms are acceptable internally only when their ambiguity is
+            named.
+          </p>
+        </article>
+        <article class="status-card">
+          <div class="eyebrow">Working Rules</div>
+          <ul class="check-list">
+            <li>Use glossary definitions by default across notes, experiments, and roadmap updates.</li>
+            <li>Prefer measurable definitions over aspirational language.</li>
+            <li>Revise terminology when experiments sharpen the meaning of a term.</li>
+            <li>Do not promote internal shorthand into public writing without formalization.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="research-language" aria-labelledby="research-language-title">
+      <h2 class="section-title" id="research-language-title">Research Language</h2>
+      <div class="grid">
+        <article class="definition-group">
+          <div class="eyebrow">System Vocabulary</div>
+          <h3>Agents, Inference, Grounding</h3>
+          <dl>
+            <div>
+              <dt>Agent</dt>
+              <dd>A system that performs multi-step inference or action selection under a specified objective. It is not assumed to be truthful or symbolic by default.</dd>
+            </div>
+            <div>
+              <dt>Probabilistic Agent</dt>
+              <dd>A model whose outputs depend on learned distributions, stochastic sampling, or uncertain internal representations. Large language models usually fall into this category.</dd>
+            </div>
+            <div>
+              <dt>Inference</dt>
+              <dd>The process by which a system derives outputs or state updates from inputs, priors, and learned or formal structure. It may be neural, symbolic, approximate, hybrid, deterministic, or probabilistic.</dd>
+            </div>
+            <div>
+              <dt>Grounding</dt>
+              <dd>Tying outputs to external constraints, verified data, formal systems, or interpretable state structure so claims are not merely statistically plausible.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="definition-group">
+          <div class="eyebrow">Truth Properties</div>
+          <h3>Faithfulness, Truth, Coherence</h3>
+          <dl>
+            <div>
+              <dt>Hallucination</dt>
+              <dd>An output that presents unsupported or fabricated content as valid. It should always be judged against a task definition or evidence source, not vague intuition.</dd>
+            </div>
+            <div>
+              <dt>Faithfulness</dt>
+              <dd>The degree to which an output is actually supported by the system's reasoning process, evidence, or governing constraints rather than post-hoc explanation.</dd>
+            </div>
+            <div>
+              <dt>Truth Alignment</dt>
+              <dd>The degree to which a system is guided toward externally correct, internally consistent, and formally admissible outputs. It is not equivalent to user agreement or stylistic fluency.</dd>
+            </div>
+            <div>
+              <dt>Mathematical Coherence</dt>
+              <dd>Consistency between system behavior and the logical, optimization, and interface structures used to describe or constrain it.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="definition-group">
+          <div class="eyebrow">Program Scope</div>
+          <h3>Neuro-Symbolic Framing</h3>
+          <dl>
+            <div>
+              <dt>Neuro-Symbolic AI</dt>
+              <dd>The integration of learned statistical models with explicit rules, symbolic structures, proof mechanisms, or verification modules.</dd>
+            </div>
+            <div>
+              <dt>Architectural Determinism</dt>
+              <dd>The degree to which system behavior is constrained by explicit and inspectable rules. It does not require identical outputs on every run, but it does require formally limited admissible behavior.</dd>
+            </div>
+            <div>
+              <dt>Control Layer</dt>
+              <dd>A mechanism placed around, above, or within a probabilistic model to enforce or encourage compliance with declared constraints.</dd>
+            </div>
+            <div>
+              <dt>Symbolic Module</dt>
+              <dd>A subsystem that manipulates explicit human-interpretable structures such as rules, clauses, variables, or proofs.</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="logic-systems" aria-labelledby="logic-systems-title">
+      <h2 class="section-title" id="logic-systems-title">Logic and Constraint Systems</h2>
+      <div class="grid">
+        <article class="definition-group">
+          <div class="eyebrow">Classical Foundations</div>
+          <h3>Logic Substrate</h3>
+          <dl>
+            <div>
+              <dt>Boolean Satisfiability (SAT)</dt>
+              <dd>The problem of deciding whether there exists a Boolean assignment that makes a logical formula true. It provides a formal substrate for consistency and feasibility.</dd>
+            </div>
+            <div>
+              <dt>CNF</dt>
+              <dd>Conjunctive normal form, where a formula is written as an AND of clauses and each clause is an OR of literals. It is central for SAT representations and machine-checkable reasoning tasks.</dd>
+            </div>
+            <div>
+              <dt>DPLL</dt>
+              <dd>The Davis-Putnam-Logemann-Loveland procedure for SAT, built around branching, unit propagation, simplification, and backtracking.</dd>
+            </div>
+            <div>
+              <dt>Formal Logic</dt>
+              <dd>A rule-governed symbolic system for representing propositions, inference procedures, and validity relations relevant to verification and reasoning.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="definition-group">
+          <div class="eyebrow">Constraint Handling</div>
+          <h3>Rules, Violations, Verification</h3>
+          <dl>
+            <div>
+              <dt>Constraint</dt>
+              <dd>A rule limiting acceptable outputs, intermediate states, or transitions. Constraints may be logical, structural, optimization-based, or interface-based.</dd>
+            </div>
+            <div>
+              <dt>Constraint Violation</dt>
+              <dd>Any output or decision that fails a declared rule or admissibility condition. Benchmarks should distinguish soft violations from hard failures.</dd>
+            </div>
+            <div>
+              <dt>Logic Adherence</dt>
+              <dd>The extent to which outputs or state transitions satisfy predefined logical rules. It should be measured by explicit tests rather than human impression.</dd>
+            </div>
+            <div>
+              <dt>Verification</dt>
+              <dd>The act of checking whether an output or state satisfies specified criteria. Verification should be distinguished from generation.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="definition-group">
+          <div class="eyebrow">Research Direction</div>
+          <h3>Continuous DPLL and Relaxation</h3>
+          <dl>
+            <div>
+              <dt>Continuous DPLL</dt>
+              <dd>A working term for expressing DPLL-like reasoning operations in differentiable or continuous vector spaces while preserving enough symbolic structure to remain useful.</dd>
+            </div>
+            <div>
+              <dt>Differentiable Relaxation</dt>
+              <dd>A continuous approximation of a discrete operation that enables gradient-based optimization. Smoothness is not enough; useful structure must remain.</dd>
+            </div>
+            <div>
+              <dt>Rule System</dt>
+              <dd>An explicit set of symbolic conditions or inference rules used to evaluate or guide model behavior.</dd>
+            </div>
+            <div>
+              <dt>Search Procedure</dt>
+              <dd>An algorithmic process that explores candidate states, assignments, proofs, or outputs in order to satisfy objectives or constraints.</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="optimization" aria-labelledby="optimization-title">
+      <h2 class="section-title" id="optimization-title">Optimization and Geometry</h2>
+      <div class="grid">
+        <article class="definition-group">
+          <div class="eyebrow">Dynamics</div>
+          <h3>Optimization Cognition Terms</h3>
+          <dl>
+            <div>
+              <dt>Optimization Cognition</dt>
+              <dd>A working term for treating cognitive or reasoning dynamics as movement through a high-dimensional objective landscape shaped by prediction error, stability, or consistency.</dd>
+            </div>
+            <div>
+              <dt>Prediction Error</dt>
+              <dd>The discrepancy between expected and observed state, output, or signal under a given model. The exact definition must be task-aligned rather than abstractly assumed.</dd>
+            </div>
+            <div>
+              <dt>Latent Structure</dt>
+              <dd>Patterns or relations encoded in hidden variables, learned states, or optimization geometry that are not directly visible from raw outputs alone.</dd>
+            </div>
+            <div>
+              <dt>Curvature-Aware Optimization</dt>
+              <dd>Optimization that explicitly uses second-order structure, such as Hessians or curvature approximations, to adapt updates or characterize stability.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="definition-group">
+          <div class="eyebrow">Second-Order Analysis</div>
+          <h3>Geometry of Learning</h3>
+          <dl>
+            <div>
+              <dt>Hessian Structure</dt>
+              <dd>The organization of second-order partial derivatives of a scalar objective with respect to parameters or states. It captures local curvature and inter-dimensional coupling.</dd>
+            </div>
+            <div>
+              <dt>Taylor Expansion</dt>
+              <dd>An approximation of a function near a point using derivatives. Second-order Taylor expansions connect local optimization geometry to interpretable updates.</dd>
+            </div>
+            <div>
+              <dt>Calibration</dt>
+              <dd>The alignment between stated or implied model confidence and empirical correctness. This matters when a control layer aims to improve not just correctness but reliability signals.</dd>
+            </div>
+            <div>
+              <dt>Failure Mode</dt>
+              <dd>A recurring identifiable way a model or experiment becomes incorrect, unstable, misleading, or unusable. Every major experiment should report them explicitly.</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="evaluation" aria-labelledby="evaluation-title">
+      <h2 class="section-title" id="evaluation-title">Evaluation and Research Discipline</h2>
+      <div class="grid">
+        <article class="definition-group">
+          <div class="eyebrow">Measurement</div>
+          <h3>Benchmarks and Metrics</h3>
+          <dl>
+            <div>
+              <dt>Benchmark</dt>
+              <dd>A repeatable evaluation task suite with shared task distribution, metrics, and acceptance criteria.</dd>
+            </div>
+            <div>
+              <dt>Contradiction Rate</dt>
+              <dd>The proportion of outputs containing mutually incompatible claims. It must always specify whether contradiction is internal, external, or measured against formal rules.</dd>
+            </div>
+            <div>
+              <dt>Ablation</dt>
+              <dd>A controlled experiment that removes or changes one component to estimate its causal contribution while holding the rest of the system fixed.</dd>
+            </div>
+            <div>
+              <dt>Reproducibility</dt>
+              <dd>The ability to rerun an experiment and obtain materially consistent results given the same code, configuration, data, and seed policy.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="definition-group">
+          <div class="eyebrow">Hypothesis Work</div>
+          <h3>Research Claims</h3>
+          <dl>
+            <div>
+              <dt>Falsifiable Hypothesis</dt>
+              <dd>A claim framed so that possible empirical outcomes could count against it. Improvement claims without rejection conditions are not sufficient.</dd>
+            </div>
+            <div>
+              <dt>Hypothesis Tracker</dt>
+              <dd>A living document that records claims, rationale, prediction, status, dependencies, and falsification conditions across the research program.</dd>
+            </div>
+            <div>
+              <dt>Key Dependency</dt>
+              <dd>A prerequisite artifact, benchmark, implementation, or metric that must exist before a hypothesis can be meaningfully tested.</dd>
+            </div>
+            <div>
+              <dt>Next Action</dt>
+              <dd>The smallest concrete step that materially advances a hypothesis from intuition toward testable execution.</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="formalization" aria-labelledby="formalization-title">
+      <h2 class="section-title" id="formalization-title">Terms Requiring Formalization</h2>
+      <div class="note-card">
+        <h3>Internal Terms to Handle Carefully</h3>
+        <p>
+          The following expressions are useful inside the lab but should not appear in external papers
+          unless a precise mathematical or empirical definition is provided: continuous DPLL, optimization
+          cognition, cognitive state model, mathematically coherent truth, and deterministic control layer.
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span>Naming</span>
+          <p>Use <strong>Deterministic Architecture</strong> for the research stream and <strong>control layer</strong> for a concrete mechanism or implementation.</p>
+        </div>
+        <div class="timeline-item">
+          <span>Publication</span>
+          <p>Use <strong>Continuous DPLL</strong> only when a defined formulation exists, not as a placeholder for intuition about differentiable SAT reasoning.</p>
+        </div>
+        <div class="timeline-item">
+          <span>Revision</span>
+          <p>Revise the glossary whenever a new benchmark introduces measurement language, a hypothesis depends on an undefined term, or repeated discussion reveals ambiguity.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        This page is the HTML companion to the working glossary. Keep the Markdown source aligned with the
+        presentation layer so terminology remains stable across planning and implementation.
+      </p>
+      <div class="link-row">
+        <a class="cta" href="../notes/hypothesis-tracker.html">Open Hypothesis Tracker</a>
+        <a class="source-link" href="./research-glossary.md">Markdown Source</a>
+      </div>
+    </footer>
+  </main>
+  <script src="../assets/theme-toggle.js"></script>
+</body>
+</html>
