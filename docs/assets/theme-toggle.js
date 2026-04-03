@@ -4,10 +4,16 @@
   if (!button) return;
 
   var label = button.querySelector("[data-theme-label]");
+  var logo = document.querySelector("[data-theme-logo]");
   var storageKey = "coherascent-theme";
 
   function applyTheme(theme) {
     root.setAttribute("data-theme", theme);
+    if (logo) {
+      logo.src = theme === "light"
+        ? logo.getAttribute("data-logo-light")
+        : logo.getAttribute("data-logo-dark");
+    }
     if (label) {
       label.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
     }
